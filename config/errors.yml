@@ -1,0 +1,6 @@
+en:
+  dry_validation:
+    errors:
+      email_format: "has invalid"
+      unique_email: "is already taken"
+      user_exists: "user does not exist"
