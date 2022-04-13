@@ -5,6 +5,8 @@ module UserForm
       required(:id).filled(:integer, gt?: 0)
     end
 
-    rule(:id).validate(:user_exists)
+    rule(:id) do
+      key(:user).failure(:user_exists) unless User.exists?(id: value)
+    end
   end
 end

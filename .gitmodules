@@ -1,0 +1,3 @@
+[submodule "engines/exchange_rates"]
+	path = engines/exchange_rates
+	url = https://github.com/niesamowityrycerz/exchange_rates

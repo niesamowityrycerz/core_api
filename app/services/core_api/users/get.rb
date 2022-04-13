@@ -13,7 +13,9 @@ module CoreApi
         return validation_errors(form) if form.failure?
 
         params = form.to_h
-        get_user(params)
+        retrieved_user = get_user(params)
+
+        { user: retrieved_user }
       end
 
       private

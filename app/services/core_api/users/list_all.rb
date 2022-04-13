@@ -4,12 +4,13 @@ module CoreApi
 
       def self.call
         users = User.all
-        users.empty? ? no_users_response : users
+        body = users.empty? ? no_users_response : users
+        { users: body }
       end
 
       private
 
-      def no_users_response
+      def self.no_users_response
         "There is no users.Go ahead and create one!"
       end
 

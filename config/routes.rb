@@ -6,7 +6,11 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:show, :index, :create]
+      resources :users, only: [:show, :index, :create] do
+        member do
+          mount ExchangeRates::Engine, at: "/exchange_rates"
+        end
+      end
     end
   end
 end

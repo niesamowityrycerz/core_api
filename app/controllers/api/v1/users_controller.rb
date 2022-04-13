@@ -6,7 +6,7 @@ module Api::V1
       if service_result[:status] != 400
         render json: service_result, status: 201
       else
-        render json: service_result[:errors], status: 400
+        render json: service_result, status: 400
       end
     end
 
@@ -20,7 +20,7 @@ module Api::V1
       if service_result[:status] != 400
         render json: service_result
       else
-        render json: service_result[:errors], status: 400
+        render json: service_result, status: 400
       end
     end
 
