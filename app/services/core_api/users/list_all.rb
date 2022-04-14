@@ -11,7 +11,7 @@ module CoreApi
       private
 
       def self.no_users_response
-        "There is no users.Go ahead and create one!"
+        "There are no users.Go ahead and create one!"
       end
 
     end

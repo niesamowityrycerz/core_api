@@ -38,7 +38,7 @@ RSpec.describe 'List all user', type: :request do
       expect(response.status).to eq(200)
       parsed_body = JSON.parse(response.body)
 
-      expect(parsed_body['users']).to eq("There is no users.Go ahead and create one!")
+      expect(parsed_body['users']).to eq("There are no users.Go ahead and create one!")
     end
   end
 end
